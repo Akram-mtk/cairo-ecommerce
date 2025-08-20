@@ -1,0 +1,20 @@
+/* Sidebar base style */
+.sidebar {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Small screens: hide sidebar off-screen */
+@media (max-width: 991.98px) {
+  .sidebar {
+    position: fixed;
+    top: 60px; /* navbar height */
+    left: 0;
+    height: calc(100vh - 60px);
+    transform: translateX(-100%);
+  }
+
+  /* When open → slide into view */
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
