@@ -3,6 +3,27 @@
   transition: transform 0.3s ease-in-out;
 }
 
+/* Navigation item hover effects */
+.nav-item {
+  .nav-link {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin-bottom: 2px;
+    
+    &:hover {
+      background-color: #007bff !important;
+      color: white !important;
+      transform: translateX(5px);
+      box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+      cursor: pointer;
+    }
+    
+    &:active {
+      transform: translateX(3px) scale(0.98);
+    }
+  }
+}
+
 /* Small screens: hide sidebar off-screen */
 @media (max-width: 991.98px) {
   .sidebar {
